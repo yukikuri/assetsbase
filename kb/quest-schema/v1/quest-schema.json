@@ -1,8 +1,9 @@
 {
   "meta": {
     "schemaVersion": 1,
-    "revision": 1,
-    "updatedAt": "2026-10-12T00:00:00Z"
+    "revision": 2026101201,
+    "updatedAt": "2026-10-12T00:00:00Z",
+    "questInfos": []
   },
   "quests": []
 }
