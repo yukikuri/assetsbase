@@ -1,143 +1,42 @@
 {
   "meta": {
     "schemaVersion": 1,
-    "revision": 2026101502,
-    "updatedAt": "2026-10-15T12:00:00Z",
+    "revision": 2026111201,
+    "updatedAt": "2026-11-12T12:00:00Z",
     "questInfos": [
-       { "no": 1119, "info": "【期間限定】Halloweenの南瓜、食べりゅ?"},
-       { "no": 984, "info": "【期間限定任務】14年目実りの秋、南瓜始め！"},
-       { "no": 985, "info": "【期間限定任務】特務護衛戦隊、抜錨せよ！"},
-       { "no": 986, "info": "【期間限定任務】USS Trick or Treat！"},
-       { "no": 987, "info": "【期間限定任務】西方南瓜祭り!  Buono!"},
-       { "no": 1002, "info": "【限定拡張作戦】南瓜祭り2026、北方作戦！"},
-       { "no": 1038, "info": "【限定拡張作戦】Halloween、おかわり開始！"},
-       { "no": 1039, "info": "【限定拡張作戦】Halloween海上護衛隊出撃！"},
-       { "no": 1040, "info": "【限定拡張作戦】Halloween狼隊、夜の襲撃！"},
-       { "no": 1171, "info": "【限定拡張作戦】対潜装備の整理整頓！2026"},
-       { "no": 359, "info": "Halloween艦隊 実りの秋、最新演習！"},
-       { "no": 1053, "info": "再編二十駆「天霧」「狭霧」南方へ展開せよ！"}
+       { "no": 386, "info": "【期間限定任務】秋刀魚祭り準備演習！"},
+       { "no": 1053, "info": "再編二十駆「天霧」「狭霧」南方へ展開せよ！"},
+       { "no": 1172, "info": "【雷装強化工廠任務】夜戦突撃装備の強化【I】"}
     ]
   },
   "quests": [
     {
-      "no": 984,
-      "questType": "battleMapDeck",
-      "max": [2, 2, 2],
-      "key": "yearly",
-      "maps": [
-        [1, 3, "A"],
-        [1, 4, "A"],
-        [2, 1, "A"]
-      ],
-      "formatter": [],
+      "no": 386,
+      "questType": "practiceDeck",
+      "max": [3],
+      "key": "daily",
+      "need_win_rank": "S",
+      "formatter": ["演習S勝利："],
       "definitions": [
         [
           {
-            "type": "shipCount",
+            "type": "deckShipCount",
             "operator": "gte",
-            "value": 1,
-            "scope": "flagship",
-            "shipIds": [124, 44, 45, 15, 93, 95, 415, 634, 635]
+            "value": 4
           },
           {
             "type": "shipCount",
-            "operator": "gte",
-            "value": 3,
-            "scope": "all",
-            "shipIds": [124, 44, 45, 15, 93, 95, 415, 634, 635]
-          }
-        ]
-      ]
-    },
-    {
-      "no": 1038,
-      "questType": "battleMapDeck",
-      "max": [4, 4],
-      "key": "infer",
-      "maps": [
-        [1, 1, "S"],
-        [1, 3, "S"]
-      ],
-      "formatter": [],
-      "definitions": [
-        [
-          {
-            "type": "shipCount",
-            "operator": "gte",
-            "value": 1,
+            "shipIds": [931, 15, 479, 44, 96, 941, 637, 900, 943],
             "scope": "flagship",
-            "shipIds": [
-              124, 93, 15, 993, 953,
-              634, 635, 451, 562, 942
-            ]
+            "operator": "gte",
+            "value": 1
           },
           {
             "type": "shipCount",
+            "shipIds": [931, 15, 479, 44, 96, 941, 637, 900, 943],
+            "scope": "escort",
             "operator": "gte",
-            "value": 4,
-            "scope": "all",
-            "shipIds": [
-              124, 93, 15, 993, 953,
-              634, 635, 451, 562, 942
-            ]
-          }
-        ]
-      ]
-    },
-    {
-      "no": 1039,
-      "questType": "battleMapDeck",
-      "max": [1, 1, 1],
-      "key": "infer",
-      "maps": [
-        [1, 2, "S"],
-        [1, 4, "S"],
-        [1, 5, "S"]
-      ],
-      "formatter": [],
-      "definitions": [
-        [
-          {
-            "type": "shipCount",
-            "operator": "gte",
-            "value": 4,
-            "shipIds": [
-              114, 671, 484, 921, 922, 904,
-              95, 993, 540, 637, 638, 898
-            ]
-          }
-        ]
-      ]
-    },
-    {
-      "no": 1040,
-      "questType": "battleMapDeck",
-      "max": [2, 2],
-      "key": "infer",
-      "maps": [
-        [2, 1, "S"],
-        [2, 2, "S"]
-      ],
-      "formatter": [],
-      "definitions": [
-        [
-          {
-            "type": "shipCount",
-            "operator": "gte",
-            "value": 1,
-            "scope": "flagship",
-            "shipIds": [
-              923, 93, 45, 415, 528, 943, 639, 932
-            ]
-          },
-          {
-            "type": "shipCount",
-            "operator": "gte",
-            "value": 3,
-            "scope": "all",
-            "shipIds": [
-              923, 93, 45, 415, 528, 943, 639, 932
-            ]
+            "value": 3
           }
         ]
       ]
@@ -166,180 +65,18 @@
       ]
     },
     {
-      "no": 359,
-      "questType": "practiceDeck",
-      "max": [5],
-      "key": "daily",
-      "need_win_rank": "A",
-      "formatter": ["演習A勝利："],
-      "definitions": [
-        [
-          {
-            "type": "shipCount",
-            "operator": "gte",
-            "value": 4,
-            "shipIds": [
-              124, 114, 93, 15, 44, 45, 415,
-              95, 528, 484, 881, 519, 1005, 562
-            ]
-          }
-        ]
-      ]
-    },
-    {
-      "no": 985,
-      "questType": "battleMapDeck",
-      "max": [1, 1, 1, 1],
-      "key": "infer",
-      "maps": [
-        [1, 2, "S"],
-        [1, 5, "S"],
-        [2, 2, "S"],
-        [2, 3, "S"]
-      ],
-      "formatter": [],
-      "definitions": [
-        [
-          {
-            "type": "shipCount",
-            "operator": "gte",
-            "value": 3,
-            "shipIds": [
-              540, 921, 922, 995, 634, 635,
-              953, 44, 671, 528, 484, 993
-            ]
-          }
-        ]
-      ]
-    },
-    {
-      "no": 986,
-      "questType": "battleMapDeck",
-      "max": [2, 2, 2],
-      "key": "yearly",
-      "maps": [
-        [2, 1, "S"],
-        [2, 5, "S"],
-        [3, 1, "S"]
-      ],
-      "formatter": [],
-      "definitions": [
-        [
-          {
-            "type": "shipCount",
-            "operator": "gte",
-            "value": 3,
-            "shipIds": [
-              1005, 923, 544, 896, 562, 942, 932
-            ]
-          }
-        ]
-      ]
-    },
-    {
-      "no": 987,
-      "questType": "battleMapDeck",
-      "max": [1, 1, 1],
-      "key": "infer",
-      "maps": [
-        [4, 2, "S"],
-        [4, 3, "S"],
-        [4, 4, "S"]
-      ],
-      "formatter": [],
-      "definitions": [
-        [
-          {
-            "type": "shipCount",
-            "operator": "gte",
-            "value": 1,
-            "scope": "flagship",
-            "shipIds": [
-              442, 575, 614, 443, 653, 519, 535,
-              636, 881, 93, 15, 124, 44
-            ]
-          },
-          {
-            "type": "shipCount",
-            "operator": "gte",
-            "value": 3,
-            "scope": "all",
-            "shipIds": [
-              442, 575, 614, 443, 653, 519, 535,
-              636, 881, 93, 15, 124, 44
-            ]
-          }
-        ]
-      ]
-    },
-    {
-      "no": 1002,
-      "questType": "battleMapDeck",
-      "max": [1, 1, 1],
-      "key": "yearly",
-      "maps": [
-        [3, 2, "S"],
-        [3, 4, "S"],
-        [3, 5, "S"]
-      ],
-      "formatter": [],
-      "definitions": [
-        [
-          {
-            "type": "shipCount",
-            "operator": "gte",
-            "value": 1,
-            "scope": "flagship",
-            "shipIds": [
-              1005, 923, 544, 562, 124,
-              114, 93, 15, 410, 993
-            ]
-          },
-          {
-            "type": "shipCount",
-            "operator": "gte",
-            "value": 3,
-            "scope": "all",
-            "shipIds": [
-              1005, 923, 544, 562, 124,
-              114, 93, 15, 410, 993
-            ]
-          }
-        ]
-      ]
-    },
-    {
-      "no": 1119,
+      "no": 1172,
       "questType": "destroyItemIdOrType",
-      "max": [9, 9, 9],
+      "max": [10],
       "key": "infer",
       "id_or_types": [
-        { "type": 1 },
-        { "type": 2 },
-        { "type": 10 }
+        { "id": 14 }
       ],
-      "formatter": [
-        "破棄 小口径：",
-        "中口径：",
-        "水上偵察機："
-      ],
-      "definitions": []
-    },
-    {
-      "no": 1171,
-      "questType": "destroyItemIdOrType",
-      "max": [12, 8, 6],
-      "key": "infer",
-      "id_or_types": [
-        { "id": 44 },
-        { "id": 226 },
-        { "id": 46 }
-      ],
-      "formatter": [
-        "破棄 九四式：",
-        "九五式：",
-        "九三式ソナー："
-      ],
+      "condition": {
+        "flagship_slotitem_ids": [58, 58, 15],
+        "flagship_slotitem_lvl": [0, 0, 10]
+      },
+      "formatter": ["破棄 61cm四連装魚雷："],
       "definitions": []
     }
   ]
