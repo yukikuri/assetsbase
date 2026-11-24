@@ -1,8 +1,8 @@
 {
   "meta": {
     "schemaVersion": 1,
-    "revision": 2026111201,
-    "updatedAt": "2026-11-12T12:00:00Z",
+    "revision": 2026112401,
+    "updatedAt": "2026-11-24T00:00:00Z",
     "questInfos": [
        { "no": 386, "info": "【期間限定任務】秋刀魚祭り準備演習！"},
        { "no": 1053, "info": "再編二十駆「天霧」「狭霧」南方へ展開せよ！"},
@@ -26,14 +26,14 @@
           },
           {
             "type": "shipCount",
-            "shipIds": [931, 15, 479, 44, 96, 941, 637, 900, 943],
+            "shipIds": [1003, 943, 900, 1055, 480, 479, 44, 144, 14, 96, 15],
             "scope": "flagship",
             "operator": "gte",
             "value": 1
           },
           {
             "type": "shipCount",
-            "shipIds": [931, 15, 479, 44, 96, 941, 637, 900, 943],
+            "shipIds": [1003, 943, 900, 1055, 480, 479, 44, 144, 14, 96, 15],
             "scope": "escort",
             "operator": "gte",
             "value": 3
