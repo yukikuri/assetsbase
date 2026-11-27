@@ -1,15 +1,38 @@
 {
   "meta": {
     "schemaVersion": 1,
-    "revision": 2026112401,
-    "updatedAt": "2026-11-24T00:00:00Z",
+    "revision": 2026112701,
+    "updatedAt": "2026-11-27T14:00:00Z",
     "questInfos": [
+       { "no": 369, "info": "【鎮守府秋刀魚祭り】秋刀魚塩焼き演習！"},
        { "no": 386, "info": "【期間限定任務】秋刀魚祭り準備演習！"},
+       { "no": 866, "info": "秋刀魚漁：鎮守府秋刀魚祭り、二航戦出ます！"},
+       { "no": 867, "info": "秋刀魚漁：こんな量じゃ、多聞丸に怒られちゃうなぁ！"},
+       { "no": 868, "info": "秋刀魚漁：どんな逆境でも、大漁にしてみせます！"},
        { "no": 1053, "info": "再編二十駆「天霧」「狭霧」南方へ展開せよ！"},
+       { "no": 1144, "info": "超秋刀魚祭り【局戦震電持ち専用】特別拡張任務"},
        { "no": 1172, "info": "【雷装強化工廠任務】夜戦突撃装備の強化【I】"}
     ]
   },
   "quests": [
+    {
+      "no": 369,
+      "questType": "practiceDeck",
+      "max": [4],
+      "key": "daily",
+      "need_win_rank": "A",
+      "formatter": ["演習A勝利："],
+      "definitions": [
+        [
+          {
+            "type": "shipCount",
+            "shipIds": [144, 145, 421, 423, 14, 167, 74, 995, 944, 1055, 1053, 962],
+            "operator": "gte",
+            "value": 4
+          }
+        ]
+      ]
+    },
     {
       "no": 386,
       "questType": "practiceDeck",
@@ -42,6 +65,33 @@
       ]
     },
     {
+      "no": 866,
+      "questType": "collectItem",
+      "max": [8],
+      "key": "yearly",
+      "item_id": 68,
+      "formatter": ["秋刀魚所持数："],
+      "definitions": []
+    },
+    {
+        "no": 867,
+        "questType": "collectItem",
+        "max": [16],
+        "key": "yearly",
+        "item_id": 68,
+        "formatter": ["秋刀魚所持数："],
+        "definitions": []
+    },
+    {
+        "no": 868,
+        "questType": "collectItem",
+        "max": [27],
+        "key": "yearly",
+        "item_id": 68,
+        "formatter": ["秋刀魚所持数："],
+        "definitions": []
+    },
+    {
       "no": 1053,
       "questType": "battleMapDeck",
       "max": [1, 1, 1, 1],
@@ -63,6 +113,61 @@
           }
         ]
       ]
+    },
+    {
+      "no": 1110,
+      "questType": "destroyItemIdOrType",
+      "max": [4],
+      "key": "yearly",
+      "id_or_types": [
+        { "id": 129 }
+      ],
+      "formatter": ["破棄 熟練見張員："],
+      "condition": {
+        "flagship_slotitem_ids": [145],
+        "flagship_slotitem_lvl": [4]
+      },
+      "definitions": [
+        [
+          {
+            "type": "shipCount",
+            "shipIds": [135],
+            "scope": "flagship",
+            "minLevel": 100,
+            "operator": "gte",
+            "value": 1
+          }
+        ],
+        [
+          {
+            "type": "shipCount",
+            "shipIds": [996],
+            "scope": "flagship",
+            "minLevel": 1,
+            "operator": "gte",
+            "value": 1
+          }
+        ]
+      ]
+    },
+    {
+      "no": 1144,
+      "questType": "destroyItemIdOrType",
+      "max": [4],
+      "key": "yearly",
+      "id_or_types": [
+        { "id": 21 }
+      ],
+      "condition": {
+        "flagship": {
+          "mode": "shipMstIds",
+          "ids": [196]
+        },
+        "flagship_slotitem_ids": [],
+        "flagship_slotitem_lvl": []
+      },
+      "formatter": ["破棄 零式艦戦52型："],
+      "definitions": []
     },
     {
       "no": 1172,
